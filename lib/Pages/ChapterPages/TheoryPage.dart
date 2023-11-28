@@ -6,6 +6,10 @@ class TheoryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Map<String, dynamic> args = ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
+    int numberOfChapter = args["numberOfChapter"];
+    List<String> theory = args["theory"];
+    List<String> test = args["test"];
     return MaterialApp(
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.black,
@@ -38,7 +42,6 @@ class TheoryPage extends StatelessWidget {
                           )
                         ),
                       ),
-                      const Padding(padding: EdgeInsets.only(top:29)),
                       Expanded (
                        child : Padding (
                          padding: const EdgeInsets.all(20),
@@ -52,26 +55,38 @@ class TheoryPage extends StatelessWidget {
                              ).createShader(bounds);
                            },
                            blendMode: BlendMode.dstIn,
-                           child: ListView(
-                        children : const [
+                               child: ShaderMask(
+                                 shaderCallback: (Rect bounds) {
+                                   return const LinearGradient(
+                                     begin: Alignment.bottomCenter,
+                                     end: Alignment.topCenter,
+                                     colors: <Color>[Colors.white, Colors.transparent],
+                                     stops: <double>[0.973, 1],
+                                   ).createShader(bounds);
+                                 },
+                                 blendMode: BlendMode.dstIn,
+                                 child: ListView(
+                        children : [
                         SizedBox(
                           width: 380,
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
+                                const Padding(padding: EdgeInsets.only(top: 10)),
+                                //const Padding(padding: EdgeInsets.only(bottom: 20)),
                                 Text(
-                                  "        Таким образом консультация с широким активом представляет собой интересный эксперимент проверки соответствующий условий активизации. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание дальнейших направлений развития. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности требуют от нас анализа направлений прогрессивного развития. Таким образом укрепление и развитие структуры влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Идейные соображения высшего порядка, а также консультация с широким активом представляет собой интересный эксперимент проверки направлений прогрессивного развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки соответствующий условий активизации. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание дальнейших направлений развития. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности требуют от нас анализа направлений прогрессивного развития. Таким образом укрепление и развитие структуры влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Идейные соображения высшего порядка, а также консультация с широким активом представляет собой интересный эксперимент проверки направлений прогрессивного развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки соответствующий условий активизации. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание дальнейших направлений развития. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности требуют от нас анализа направлений прогрессивного развития. Таким образом укрепление и развитие структуры влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Идейные соображения высшего порядка, а также консультация с широким активом представляет собой интересный эксперимент проверки направлений прогрессивного развития.",
+                                  theory[numberOfChapter-1],
                                   textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 20),
+                                  style: const TextStyle(fontSize: 16),
                                 ),
+                                const Padding(padding: EdgeInsets.only(top: 23)),
                               ]
                           ),
                         ),
-                      //  ),
                         ],
+                                 ),),
                       ),
                       )
-                      ),
                       ),
                       SizedBox(
                         width: 150,

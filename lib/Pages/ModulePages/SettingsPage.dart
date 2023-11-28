@@ -46,7 +46,7 @@ class _State extends State<SettingsPage> {
     return MaterialApp(
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.black,
-          colorScheme: ColorScheme.dark(),
+          colorScheme: const ColorScheme.dark(),
         ),
        home: Scaffold(
        body: SafeArea (
@@ -60,35 +60,12 @@ class _State extends State<SettingsPage> {
        child : Row(
            mainAxisAlignment: MainAxisAlignment.center,
        children : [
-         Expanded(
-         child : ListView(
-            children: [
-              Text('2', style: TextStyle(fontSize: 200),),
-              Text('2', style: TextStyle(fontSize: 200),),
-              Text('2', style: TextStyle(fontSize: 200),),
-              Text('2', style: TextStyle(fontSize: 200),),
-              Text('2', style: TextStyle(fontSize: 200),),
-              Text('2', style: TextStyle(fontSize: 200),),
-              Text('2', style: TextStyle(fontSize: 200),),
-              Text('2', style: TextStyle(fontSize: 200),),
-              Text('2', style: TextStyle(fontSize: 200),),
-              Text('2', style: TextStyle(fontSize: 200),),
-              Text('2', style: TextStyle(fontSize: 200),),
-              Text('2', style: TextStyle(fontSize: 200),),
-              Text('2', style: TextStyle(fontSize: 200),),
             ]
         )
          )
-           ]
        )
        )
-       )
-       )
-
     );
 
   }
-//   @override
-//   Widget build(BuildContext context) {
-//     return
 }

@@ -24,14 +24,13 @@ flutter:
   uses-material-design: true
   assets:
     - assets/Naming.png
-    - assets/TheoryButton.png
-    - assets/CalculatorButton.png
-    - assets/TestsButton.png
-    - assets/SettingsButton.png
     - assets/Background.png
+    - assets/Chapters.png
+    - assets/IndustrialSanitation.png
+    - assets/Arrow.png
 
-#  fonts:
-#    - family:
-#      fonts:
-#        - asset: fonts/
+  fonts:
+    - family: LucGay
+      fonts:
+        - asset: fonts/LucGay.otf
 

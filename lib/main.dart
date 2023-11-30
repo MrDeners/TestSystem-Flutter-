@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'Pages/Pages.dart';
 
@@ -10,6 +9,7 @@ void main () => runApp(MaterialApp(
     '/Settings': (context) => const SettingsPage(),
     '/Theory': (context) => const TheoryPage(),
     '/Test': (context) => const TestPage(),
+    '/Result' : (context) => const ResultPage(),
   },
 ));
 

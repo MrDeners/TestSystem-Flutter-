@@ -14,6 +14,10 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
+  fl_chart: ^0.65.0
+
+  share_plus: ^3.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -26,8 +30,14 @@ flutter:
     - assets/Naming.png
     - assets/Background.png
     - assets/Chapters.png
-    - assets/IndustrialSanitation.png
     - assets/Arrow.png
+    - assets/Theory.png
+    - assets/Test.png
+    - assets/Result.png
+    - assets/TwitterLogo.png
+    - assets/VKLogo.png
+    - assets/InstagramLogo.png
+    - assets/TelegramLogo.png
 
   fonts:
     - family: LucGay

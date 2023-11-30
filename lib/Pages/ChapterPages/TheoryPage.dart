@@ -12,7 +12,7 @@ class TheoryPage extends StatelessWidget {
     List<String> test = args["test"];
     return MaterialApp(
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.black,
+        scaffoldBackgroundColor: Color(0xFF1D1C1C),
           colorScheme: ColorScheme.dark(),
       ),
         home: Scaffold(
@@ -33,12 +33,12 @@ class TheoryPage extends StatelessWidget {
                     children: [
                       const Padding(padding: EdgeInsets.only(top:30)),
                       Container(
-                        height: 45,
+                        height: 50,
                         width: 250,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('assets/IndustrialSanitation.png'),
-                            fit: BoxFit.cover,
+                            image: AssetImage('assets/Theory.png'),
+                            //fit: BoxFit.cover,
                           )
                         ),
                       ),
@@ -73,7 +73,6 @@ class TheoryPage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 const Padding(padding: EdgeInsets.only(top: 10)),
-                                //const Padding(padding: EdgeInsets.only(bottom: 20)),
                                 Text(
                                   theory[numberOfChapter-1],
                                   textAlign: TextAlign.left,
@@ -93,7 +92,7 @@ class TheoryPage extends StatelessWidget {
                         height: 45,
                         child: FloatingActionButton.extended(
                           onPressed: () {
-                            Navigator.pushNamed(context, '/Test');
+                            Navigator.pushNamed(context, '/Test', arguments: {"numberOfChapter" : numberOfChapter, "test" : test});
                           },
                           focusColor: Colors.deepPurpleAccent,
                           shape: StadiumBorder (
